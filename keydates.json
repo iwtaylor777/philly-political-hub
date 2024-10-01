@@ -1,0 +1,102 @@
+[
+  {
+    "date": "2024-04-08",
+    "description": "Last day to REGISTER before the primary"
+  },
+  {
+    "date": "2024-04-16",
+    "description": "Last day to apply for a mail-in or civilian absentee ballot"
+  },
+  {
+    "date": "2024-04-23",
+    "description": "Last day for County Boards of Elections to receive voted mail-in and civilian absentee ballots (must be received by 8:00 P.M.)"
+  },
+  {
+    "date": "2024-04-23",
+    "description": "MUNICIPAL PRIMARY"
+  },
+  {
+    "date": "2024-04-30",
+    "description": "Last day for County Boards of Elections to receive voted military and overseas absentee ballots (submitted for delivery no later than 11:59 P.M. on May 15)"
+  },
+  {
+    "date": "2024-07-16",
+    "description": "First day for political parties and minor political parties to nominate candidates for the September 17, 2024 Special Election by filing nomination certificates. (25 P.S. § 2779)"
+  },
+  {
+    "date": "2024-07-16",
+    "description": "First day for political bodies to circulate and file nomination papers nominating candidates for the September 17, 2024 Special Election. (25 P.S. § 2779)"
+  },
+  {
+    "date": "2024-07-29",
+    "description": "Last day to file nomination certificates and nomination papers for the September 17, 2024 Special Election. (25 P.S. § 2779)"
+  },
+  {
+    "date": "2024-08-01",
+    "description": "Last day to file objections: 3 days after the deadline for filing for the September 17, 2024 Special Election. (25 P.S. § 2782)"
+  },
+  {
+    "date": "2024-08-05",
+    "description": "Last day for Commonwealth Court to set a hearing on objections for the September 17, 2024 Special Election: 7 days after deadline for filing (25 P.S. § 2782)"
+  },
+  {
+    "date": "2024-08-05",
+    "description": "Last day to withdraw from the September 17, 2024 Special Election: 7 days after the deadline for filing (25 P.S. § 2783)"
+  },
+  {
+    "date": "2024-08-05",
+    "description": "Last day to file substituted nomination certificates for the September 17, 2024 Special Election: 7 days after the deadline for filing (25 P.S. § 2784)"
+  },
+  {
+    "date": "2024-08-08",
+    "description": "Last day to file objections to substituted nominations for the September 17, 2024 Special Election: 3 days after substituted nomination certificate is filed (25 P.S. § 2785)"
+  },
+  {
+    "date": "2024-08-18",
+    "description": "Last day for Secretary of the Commonwealth to certify names and residence of all candidates for the September 17, 2024 Special Election (30th day preceeding the day fixed for the special election. 25 P.S. § 2786)"
+  },
+  {
+    "date": "2024-09-03",
+    "description": "Last day to register to vote before the September 17, 2024 Special Election (15 days before the election. 25 P.S. § 3071(b) (Since September 2 is a legal holiday, the deadline moves to the next business day, which is September 3, 2024. 25 P.S. §2603(e))"
+  },
+  {
+    "date": "2024-09-10",
+    "description": "Last day before the September 17, 2024 Special Election on which official applications for civilian absentee ballots may be received by the county board of elections (Tuesday before special election. 25 P.S. § 3146.2a(a))"
+  },
+  {
+    "date": "2024-09-17",
+    "description": "SPECIAL ELECTION"
+  },
+  {
+    "date": "2024-09-17",
+    "description": "All mail-in and civilian absentee ballots for the September 17, 2024 Special Election must be received by the county board of elections no later than 8:00 P.M. on this day to be counted (Election Day. 25 P.S. § 3146.6(c) and 25 P.S. § 3150.16(c))"
+  },
+  {
+    "date": "2024-09-24",
+    "description": "Last day for county boards of elections to receive voted military and overseas absentee ballots for the September 17, 2024 Special Election (By 5:00 P.M. on the 7th day following a primary or election and must be voted no later than 11:59 P.M. on September 16. 25 P.S. § 3146.8(g)(1) & 25 Pa.C.S. § 3511(a))"
+  },
+  {
+    "date": "2024-10-21",
+    "description": "Last day to REGISTER to vote in the November 5, 2024 General Election"
+  },
+  {
+    "date": "2024-10-29",
+    "description": "Last day to apply for a mail-in or civilian absentee ballot."
+  },
+  {
+    "date": "2024-11-05",
+    "description": "Last day for County Boards of Elections to receive voted mail-in and civilian absentee ballots (must be received by 8:00 P.M.)"
+  },
+  {
+    "date": "2024-11-05",
+    "description": "GENERAL ELECTION"
+  },
+  {
+    "date": "2024-11-06",
+    "description": "First day to REGISTER after November election"
+  },
+  {
+    "date": "2024-11-12",
+    "description": "Last day for County Boards of Elections to receive voted military and overseas absentee ballots (submitted for delivery no later than 11:59 P.M. on November 6)"
+  }
+]

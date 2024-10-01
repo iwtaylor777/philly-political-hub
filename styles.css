@@ -1,0 +1,96 @@
+/* styles.css */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+h1, h2 {
+    text-align: center;
+}
+
+section {
+    background-color: #fff;
+    padding: 20px;
+    margin-bottom: 30px;
+    border-radius: 5px;
+}
+
+input[type="text"] {
+    width: 200px;
+    padding: 8px;
+    margin-right: 10px;
+}
+
+button {
+    padding: 8px 15px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+#representatives-list, #keydates-list {
+    margin-top: 20px;
+}
+
+.rep-card, .keydate-item {
+    border: 1px solid #ddd;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+}
+
+.rep-card h3 {
+    margin-top: 0;
+}
+
+.keydate-item p {
+    margin: 5px 0;
+}
+
+.rep-photo {
+    max-width: 150px;
+    height: auto;
+    display: block;
+    margin-top: 10px;
+}
+
+/* styles.css */
+
+/* Adjust the main heading */
+h1 {
+    margin-top: 40px;
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+/* Style the card images */
+.card-img-top {
+    height: 200px;
+    object-fit: cover;
+}
+
+/* Center the content in the representatives and key dates sections */
+#representatives-section, #keydates-section {
+    margin-bottom: 50px;
+}
+
+/* Class for the main header */
+.main-header {
+    color: navy; /* Navy Blue color */
+}
+
+/* Class for the subtext */
+.subtext {
+    color: red;
+    font-style: italic;
+    font-weight: bold;
+}

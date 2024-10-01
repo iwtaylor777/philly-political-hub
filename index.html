@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DemocracEasy's Philadelphia Political Info Hub</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"> 
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">Philly Political Hub</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" 
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </nav>
+
+    <h1 class="text-center my-4 main-header">DemocracEasy's Philadelphia Political Hub</h1>
+    <h3 class="text-center mb-5 subtext">Get Informed, Get Involved</h3>
+
+    <!-- Address Input Section -->
+    <section id="address-section" class="container my-5">
+        <h2 class="text-center">Find Your Representatives</h2>
+        <p class="text-center">Enter your address to find your representatives:</p>
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <div class="input-group">
+                    <input type="text" id="address" class="form-control" placeholder="e.g., 1234 Market St, Philadelphia, PA">
+                    <div class="input-group-append">
+                        <button id="find-btn" class="btn btn-primary">Find</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Representatives Display Section -->
+    <section id="representatives-section" class="container" style="display: none;">
+        <h2 class="text-center">Your Representatives</h2>
+        <div id="representatives-list" class="row"></div>
+    </section>
+
+    <!-- Key Dates Section -->
+    <section id="keydates-section" class="container my-5">
+        <h2 class="text-center">Key Political Dates</h2>
+        <div id="keydates-list" class="row"></div>
+    </section>
+
+    <script src="script.js"></script>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-3">
+        <p>&copy; 2024 Philadelphia Political Hub. All rights reserved.</p>
+    </footer>
+  
+    <!-- jQuery, Popper.js, and Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>
