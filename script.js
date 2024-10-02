@@ -132,4 +132,38 @@ document.addEventListener('DOMContentLoaded', () => {
         const date = new Date(dateString);
         return date.toLocaleDateString(undefined, options);
     }
+
+    // Subscription form handling
+    const subscriptionForm = document.getElementById('subscription-form');
+    const subscriberEmailInput = document.getElementById('subscriber-email');
+    const subscriptionMessage = document.getElementById('subscription-message');
+
+    subscriptionForm.addEventListener('submit', (event) => {
+        event.preventDefault(); // Prevent the form from refreshing the page
+
+        const email = subscriberEmailInput.value.trim();
+        if (email) {
+            // TODO: Implement backend integration to store the email
+            // For now, we'll just display a success message
+            subscriptionMessage.textContent = 'Thank you for subscribing!';
+            subscriptionMessage.style.color = 'green';
+
+            // Reset the form
+            subscriptionForm.reset();
+        } else {
+            subscriptionMessage.textContent = 'Please enter a valid email address.';
+            subscriptionMessage.style.color = 'red';
+        }
+    });    
+    // Home button handling
+    const homeButton = document.getElementById('home-button');
+
+    homeButton.addEventListener('click', (event) => {
+        event.preventDefault(); // Prevent default anchor behavior
+
+        // Reset input fields and hide sections
+        addressInput.value = '';
+        representativesSection.style.display = 'none';
+        representativesList.innerHTML = '';
+    });    
 });

@@ -94,3 +94,7 @@ h1 {
     font-style: italic;
     font-weight: bold;
 }
+
+#subscription-message {
+    font-weight: bold;
+}
