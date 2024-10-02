@@ -186,3 +186,31 @@ h1 {
 .collapse {
     transition: height 0.2s ease;
 }
+
+.card-header {
+    background-color: #f8f9fa;
+}
+
+.card-header:hover {
+    background-color: #e9ecef;
+    cursor: pointer;
+}
+
+.toggle-icon {
+    font-size: 1.25rem;
+}
+
+.btn-link {
+    color: inherit;
+    text-decoration: none;
+}
+
+.btn-link:hover {
+    text-decoration: none;
+}
+
+/* Style for event cards */
+#keydates-list .card {
+    border: none;
+    border-bottom: 1px solid #dee2e6;
+}

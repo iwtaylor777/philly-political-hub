@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const keydatesList = document.getElementById('keydates-list');
 
     // Load key dates on page load
-    loadKeyDates();
+    //loadKeyDates();
 
     findBtn.addEventListener('click', () => {
         const address = addressInput.value.trim();
@@ -20,22 +20,27 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     function findRepresentatives(address) {
-        const apiKey = 'AIzaSyBw0xMiRc3dwVEjg_XKFtD0On3-JFQlnA0'; // Replace with your actual API key
-        const url = `https://www.googleapis.com/civicinfo/v2/representatives?key=${apiKey}&address=${encodeURIComponent(address)}`;
-
-        fetch(url)
-            .then(response => {
-                if (!response.ok) {
-                    throw new Error(`API error: ${response.statusText}`);
-                }
-                return response.json();
-            })
+        fetch(`https://www.googleapis.com/civicinfo/v2/representatives?key=AIzaSyBw0xMiRc3dwVEjg_XKFtD0On3-JFQlnA0&address=${encodeURIComponent(address)}`)
+            .then(response => response.json())
             .then(data => {
-                displayRepresentatives(data);
+                if (data.error) {
+                    alert(data.error.message);
+                } else {
+                    // Get the city from the normalized input
+                    const city = data.normalizedInput.city || '';
+                    displayRepresentatives(data);
+                    if (city) {
+                        // Now load key dates for this city
+                        loadKeyDates(city);
+                    } else {
+                        // If city is not available, display a message
+                        displayNoCityDatesMessage('your area');
+                    }
+                }
             })
             .catch(error => {
                 console.error('Error fetching representatives:', error);
-                alert('An error occurred while fetching representatives. Please check the address and try again.');
+                alert('An error occurred while fetching representatives.');
             });
     }
 
@@ -191,41 +196,134 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     
 
-    function loadKeyDates() {
+    function loadKeyDates(userCity) {
         fetch('keydates.json')
             .then(response => response.json())
             .then(data => {
-                displayKeyDates(data);
+                console.log('Fetched Key Dates:', data);
+                // Filter key dates based on the user's city
+                const cityKeyDates = data.filter(event => event.city.toLowerCase() === userCity.toLowerCase());
+                if (cityKeyDates.length > 0) {
+                    displayKeyDates(cityKeyDates);
+                } else {
+                    displayNoCityDatesMessage(userCity);
+                }
             })
             .catch(error => {
                 console.error('Error loading key dates:', error);
+                alert('An error occurred while loading key dates.');
             });
     }
 
     function displayKeyDates(dates) {
-        keydatesList.innerHTML = ''; // Clear previous results
+        keydatesList.innerHTML = ''; // Clear previous content
+    
+        // Get today's date without time
+        const today = new Date();
+        today.setHours(0, 0, 0, 0);
+    
+        // Separate dates into upcoming and past
+        const upcomingDates = [];
+        const pastDates = [];
+    
         dates.forEach(event => {
+            const eventDate = new Date(event.date + 'T00:00:00');
+            if (eventDate >= today) {
+                upcomingDates.push(event);
+            } else {
+                pastDates.push(event);
+            }
+        });
+    
+        // Sort the upcoming dates in ascending order
+        upcomingDates.sort((a, b) => new Date(a.date) - new Date(b.date));
+    
+        // Sort the past dates in descending order
+        pastDates.sort((a, b) => new Date(b.date) - new Date(a.date));
+    
+        // Display upcoming dates
+        if (upcomingDates.length > 0) {
+            createKeyDatesSection('Upcoming Dates', upcomingDates, 'upcoming-dates-section', false);
+        }
+    
+        // Display past dates in a collapsible section
+        if (pastDates.length > 0) {
+            createKeyDatesSection('Past Dates', pastDates, 'past-dates-section', true);
+        }
+    }
+    
+    function createKeyDatesSection(title, datesArray, sectionId, collapsed) {
+        const sectionDiv = document.createElement('div');
+        sectionDiv.className = 'mb-3';
+    
+        const headerId = sectionId + '-header';
+        const collapseId = sectionId + '-collapse';
+    
+        sectionDiv.innerHTML = `
+            <div class="card">
+                <div class="card-header d-flex justify-content-between align-items-center" id="${headerId}" data-toggle="collapse" data-target="#${collapseId}" aria-expanded="${!collapsed}" aria-controls="${collapseId}" style="cursor: pointer;">
+                    <h5 class="mb-0">${title}</h5>
+                    <i class="fas fa-chevron-${collapsed ? 'down' : 'up'} toggle-icon"></i>
+                </div>
+                <div id="${collapseId}" class="collapse ${collapsed ? '' : 'show'}" aria-labelledby="${headerId}">
+                    <div class="card-body" id="${sectionId}-body">
+                        <!-- Events will be appended here -->
+                    </div>
+                </div>
+            </div>
+        `;
+    
+        keydatesList.appendChild(sectionDiv);
+    
+        const datesBody = document.getElementById(`${sectionId}-body`);
+    
+        datesArray.forEach(event => {
             const eventItem = document.createElement('div');
-            eventItem.className = 'col-md-6';
+            eventItem.className = 'card mb-3 border-0';
     
             eventItem.innerHTML = `
-                <div class="card mb-4">
-                    <div class="card-body">
-                        <h5 class="card-title">${formatDate(event.date)}</h5>
-                        <p class="card-text">${event.description}</p>
-                    </div>
+                <div class="card-body">
+                    <h5 class="card-title">${formatDate(event.date)}</h5>
+                    <p class="card-text">${event.description}</p>
                 </div>
             `;
     
-            keydatesList.appendChild(eventItem);
+            datesBody.appendChild(eventItem);
+        });
+    
+        // Add event listener to toggle icons on collapse/expand
+        const collapseElement = document.getElementById(collapseId);
+        const headerElement = sectionDiv.querySelector(`#${headerId}`);
+        const toggleIcon = headerElement.querySelector('.toggle-icon');
+    
+        $(collapseElement).on('hide.bs.collapse', function () {
+            toggleIcon.classList.remove('fa-chevron-up');
+            toggleIcon.classList.add('fa-chevron-down');
+        });
+    
+        $(collapseElement).on('show.bs.collapse', function () {
+            toggleIcon.classList.remove('fa-chevron-down');
+            toggleIcon.classList.add('fa-chevron-up');
         });
     }    
       
 
     function formatDate(dateString) {
         const options = { year: 'numeric', month: 'long', day: 'numeric' };
-        const date = new Date(dateString);
+        const date = new Date(dateString + 'T00:00:00');
+        if (isNaN(date)) {
+            console.error('Invalid date:', dateString);
+            return 'Invalid Date';
+        }
         return date.toLocaleDateString(undefined, options);
+    }
+
+    function displayNoCityDatesMessage(city) {
+        keydatesList.innerHTML = ''; // Clear previous content
+        const messageDiv = document.createElement('div');
+        messageDiv.className = 'alert alert-info text-center';
+        messageDiv.textContent = `Key dates for ${city} are coming soon.`;
+        keydatesList.appendChild(messageDiv);
     }
 
     // Subscription form handling

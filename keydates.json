@@ -1,102 +1,347 @@
 [
   {
-    "date": "2024-04-08",
+    "city": "Philadelphia",
+    "date": "2024-04-07",
     "description": "Last day to REGISTER before the primary"
   },
   {
-    "date": "2024-04-16",
+    "city": "Philadelphia",
+    "date": "2024-04-15",
     "description": "Last day to apply for a mail-in or civilian absentee ballot"
   },
   {
-    "date": "2024-04-23",
+    "city": "Philadelphia",
+    "date": "2024-04-22",
     "description": "Last day for County Boards of Elections to receive voted mail-in and civilian absentee ballots (must be received by 8:00 P.M.)"
   },
   {
-    "date": "2024-04-23",
+    "city": "Philadelphia",
+    "date": "2024-04-22",
     "description": "MUNICIPAL PRIMARY"
   },
   {
-    "date": "2024-04-30",
+    "city": "Philadelphia",
+    "date": "2024-04-29",
     "description": "Last day for County Boards of Elections to receive voted military and overseas absentee ballots (submitted for delivery no later than 11:59 P.M. on May 15)"
   },
   {
-    "date": "2024-07-16",
+    "city": "Philadelphia",
+    "date": "2024-07-15",
     "description": "First day for political parties and minor political parties to nominate candidates for the September 17, 2024 Special Election by filing nomination certificates. (25 P.S. § 2779)"
   },
   {
-    "date": "2024-07-16",
+    "city": "Philadelphia",
+    "date": "2024-07-15",
     "description": "First day for political bodies to circulate and file nomination papers nominating candidates for the September 17, 2024 Special Election. (25 P.S. § 2779)"
   },
   {
-    "date": "2024-07-29",
+    "city": "Philadelphia",
+    "date": "2024-07-28",
     "description": "Last day to file nomination certificates and nomination papers for the September 17, 2024 Special Election. (25 P.S. § 2779)"
   },
   {
-    "date": "2024-08-01",
+    "city": "Philadelphia",
+    "date": "2024-07-31",
     "description": "Last day to file objections: 3 days after the deadline for filing for the September 17, 2024 Special Election. (25 P.S. § 2782)"
   },
   {
-    "date": "2024-08-05",
+    "city": "Philadelphia",
+    "date": "2024-08-04",
     "description": "Last day for Commonwealth Court to set a hearing on objections for the September 17, 2024 Special Election: 7 days after deadline for filing (25 P.S. § 2782)"
   },
   {
-    "date": "2024-08-05",
+    "city": "Philadelphia",
+    "date": "2024-08-04",
     "description": "Last day to withdraw from the September 17, 2024 Special Election: 7 days after the deadline for filing (25 P.S. § 2783)"
   },
   {
-    "date": "2024-08-05",
+    "city": "Philadelphia",
+    "date": "2024-08-04",
     "description": "Last day to file substituted nomination certificates for the September 17, 2024 Special Election: 7 days after the deadline for filing (25 P.S. § 2784)"
   },
   {
-    "date": "2024-08-08",
+    "city": "Philadelphia",
+    "date": "2024-08-07",
     "description": "Last day to file objections to substituted nominations for the September 17, 2024 Special Election: 3 days after substituted nomination certificate is filed (25 P.S. § 2785)"
   },
   {
-    "date": "2024-08-18",
+    "city": "Philadelphia",
+    "date": "2024-08-17",
     "description": "Last day for Secretary of the Commonwealth to certify names and residence of all candidates for the September 17, 2024 Special Election (30th day preceeding the day fixed for the special election. 25 P.S. § 2786)"
   },
   {
-    "date": "2024-09-03",
+    "city": "Philadelphia",
+    "date": "2024-09-02",
     "description": "Last day to register to vote before the September 17, 2024 Special Election (15 days before the election. 25 P.S. § 3071(b) (Since September 2 is a legal holiday, the deadline moves to the next business day, which is September 3, 2024. 25 P.S. §2603(e))"
   },
   {
-    "date": "2024-09-10",
+    "city": "Philadelphia",
+    "date": "2024-09-09",
     "description": "Last day before the September 17, 2024 Special Election on which official applications for civilian absentee ballots may be received by the county board of elections (Tuesday before special election. 25 P.S. § 3146.2a(a))"
   },
   {
-    "date": "2024-09-17",
+    "city": "Philadelphia",
+    "date": "2024-09-16",
     "description": "SPECIAL ELECTION"
   },
   {
-    "date": "2024-09-17",
+    "city": "Philadelphia",
+    "date": "2024-09-16",
     "description": "All mail-in and civilian absentee ballots for the September 17, 2024 Special Election must be received by the county board of elections no later than 8:00 P.M. on this day to be counted (Election Day. 25 P.S. § 3146.6(c) and 25 P.S. § 3150.16(c))"
   },
   {
-    "date": "2024-09-24",
+    "city": "Philadelphia",
+    "date": "2024-09-23",
     "description": "Last day for county boards of elections to receive voted military and overseas absentee ballots for the September 17, 2024 Special Election (By 5:00 P.M. on the 7th day following a primary or election and must be voted no later than 11:59 P.M. on September 16. 25 P.S. § 3146.8(g)(1) & 25 Pa.C.S. § 3511(a))"
   },
   {
-    "date": "2024-10-21",
+    "city": "Philadelphia",
+    "date": "2024-10-20",
     "description": "Last day to REGISTER to vote in the November 5, 2024 General Election"
   },
   {
-    "date": "2024-10-29",
+    "city": "Philadelphia",
+    "date": "2024-10-28",
     "description": "Last day to apply for a mail-in or civilian absentee ballot."
   },
   {
-    "date": "2024-11-05",
+    "city": "Philadelphia",
+    "date": "2024-11-04",
     "description": "Last day for County Boards of Elections to receive voted mail-in and civilian absentee ballots (must be received by 8:00 P.M.)"
   },
   {
-    "date": "2024-11-05",
+    "city": "Philadelphia",
+    "date": "2024-11-04",
     "description": "GENERAL ELECTION"
   },
   {
-    "date": "2024-11-06",
+    "city": "Philadelphia",
+    "date": "2024-11-05",
     "description": "First day to REGISTER after November election"
   },
   {
-    "date": "2024-11-12",
+    "city": "Philadelphia",
+    "date": "2024-11-11",
     "description": "Last day for County Boards of Elections to receive voted military and overseas absentee ballots (submitted for delivery no later than 11:59 P.M. on November 6)"
+  },
+  {
+    "city": "New York",
+    "date": "2024-10-26",
+    "description": "Last day to apply online or by mail"
+  },
+  {
+    "city": "New York",
+    "date": "2024-11-04",
+    "description": "Last day to apply in person at your county board of elections"
+  },
+  {
+    "city": "New York",
+    "date": "2024-11-05",
+    "description": "Put your ballot in the mail ensuring it receives a postmark no later than"
+  },
+  {
+    "city": "New York",
+    "date": "2024-11-05",
+    "description": "Drop off your ballot to your county Board of Elections Office no later by"
+  },
+  {
+    "city": "New York",
+    "date": "2024-11-03",
+    "description": "Drop off your ballot to an early voting poll site in your county"
+  },
+  {
+    "city": "New York",
+    "date": "2024-11-05",
+    "description": "Drop off your ballot to an election day poll site"
+  },
+  {
+    "city": "New York",
+    "date": "2024-10-26",
+    "description": "Last day to apply online or by mail"
+  },
+  {
+    "city": "New York",
+    "date": "2024-11-04",
+    "description": "Last day to apply in person at your county board of elections"
+  },
+  {
+    "city": "New York",
+    "date": "2024-11-05",
+    "description": "Put your ballot in the mail ensuring it receives a postmark no later than"
+  },
+  {
+    "city": "New York",
+    "date": "2024-11-05",
+    "description": "Drop off your ballot to your county Board of Elections Office no later by"
+  },
+  {
+    "city": "New York",
+    "date": "2024-11-03",
+    "description": "Drop off your ballot to an early voting poll site in your county"
+  },
+  {
+    "city": "New York",
+    "date": "2024-11-05",
+    "description": "Drop off your ballot to an election day poll site"
+  },
+  {
+    "city": "Boston",
+    "date": "2024-10-19",
+    "description": "Early voting opens"
+  },
+  {
+    "city": "Boston",
+    "date": "2024-10-26",
+    "description": "Voter registration deadline"
+  },
+  {
+    "city": "Boston",
+    "date": "2024-10-29",
+    "description": "Vote by mail application deadline"
+  },
+  {
+    "city": "Boston",
+    "date": "2024-11-01",
+    "description": "Early voting closes"
+  },
+  {
+    "city": "Boston",
+    "date": "2024-11-05",
+    "description": "Election Day!"
+  },
+  {
+    "city": "Chicago",
+    "date": "2024-03-26",
+    "description": "First day to circulate petitions for independent and Chicago Elected School Board candidates seeking election in the 2024 General Election."
+  },
+  {
+    "city": "Chicago",
+    "date": "2024-06-17",
+    "description": "First day for independent and Chicago Elected School Board candidates to file original nomination papers."
+  },
+  {
+    "city": "Chicago",
+    "date": "2024-06-24",
+    "description": "Last day for independent and Chicago Elected School Board candidates to file original nomination papers."
+  },
+  {
+    "city": "Chicago",
+    "date": "2024-07-01",
+    "description": "Last day for independent and Chicago Elected School Board candidates to file original nomination papers."
+  },
+  {
+    "city": "Chicago",
+    "date": "2024-08-05",
+    "description": "Last day to file petitions with the Chicago Board of Elections for the submission of questions of public policy. "
+  },
+  {
+    "city": "Chicago",
+    "date": "2024-08-07",
+    "description": "First day to apply for a Vote By Mail ballot for the November 5 "
+  },
+  {
+    "city": "Chicago",
+    "date": "2024-08-12",
+    "description": "Last day to file objections to petitions for the submission of questions of public policy. "
+  },
+  {
+    "city": "Chicago",
+    "date": "2024-08-19",
+    "description": "Last day for local governing boards to adopt a resolution or ordinance to allow a binding or advisory question to be placed on the ballot for the November 5 "
+  },
+  {
+    "city": "Chicago",
+    "date": "2024-08-29",
+    "description": "Last day for the city clerk to certify any binding public question or advisory referenda to the Chicago Board of Elections. "
+  },
+  {
+    "city": "Chicago",
+    "date": "2024-09-05",
+    "description": "Last day a person may file a notarized Declaration of Intent to be a write-in candidate. "
+  },
+  {
+    "city": "Chicago",
+    "date": "2024-09-20",
+    "description": "Last day to mail ballots to persons in the United States Service and/or their dependents of voting age"
+  },
+  {
+    "city": "Chicago",
+    "date": "2024-09-26",
+    "description": "First day to mail Vote By Mail ballots to voters. "
+  },
+  {
+    "city": "Chicago",
+    "date": "2024-10-03",
+    "description": "First day of Early Voting at the CBOE Supersite at 191 N. Clark and CBOE Offices at 69 W. Washington St. "
+  },
+  {
+    "city": "Chicago",
+    "date": "2024-10-08",
+    "description": "Last day for regular voter registration or transfer of registration. "
+  },
+  {
+    "city": "Chicago",
+    "date": "2024-10-09",
+    "description": "First day of Grace Period/Same Day Registration and voting. "
+  },
+  {
+    "city": "Chicago",
+    "date": "2024-10-20",
+    "description": "Last day to register to vote online on the IL State Board of Elections website. "
+  },
+  {
+    "city": "Chicago",
+    "date": "2024-10-21",
+    "description": "First day of Early Voting in all 50 Wards of Chicago. "
+  },
+  {
+    "city": "Chicago",
+    "date": "2024-10-31",
+    "description": "Last day to apply for a Vote By Mail ballot for the November 5 "
+  },
+  {
+    "city": "Chicago",
+    "date": "2024-11-04",
+    "description": "Last day of Early Voting. "
+  },
+  {
+    "city": "Chicago",
+    "date": "2024-11-05",
+    "description": "Election Day"
+  },
+  {
+    "city": "Washington, DC",
+    "date": "2024-10-15",
+    "description": "Voter registration deadline"
+  },
+  {
+    "city": "Washington, DC",
+    "date": "2024-10-16",
+    "description": "Deadline to request absentee ballot to alternate address"
+  },
+  {
+    "city": "Washington, DC",
+    "date": "2024-10-28",
+    "description": "Early voting opens"
+  },
+  {
+    "city": "Washington, DC",
+    "date": "2024-11-03",
+    "description": "Early voting closes"
+  },
+  {
+    "city": "Washington, DC",
+    "date": "2024-11-05",
+    "description": "Election Day!"
+  },
+  {
+    "city": "Washington, DC",
+    "date": "2024-11-16",
+    "description": "Absentee ballot post-marked by election date must be received by this date"
+  },
+  {
+    "city": "San Francisco",
+    "date": "2024-11-05",
+    "description": "Election Day!"
   }
 ]
