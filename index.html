@@ -1,12 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>DemocracEasy's Philadelphia Political Info Hub</title>
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"> 
-    <link rel="stylesheet" href="styles.css">
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <title>Democraceasy's Philadelphia Political Hub</title>
+        <!-- Google Fonts -->
+        <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
+        <!-- Custom Styles -->
+        <link rel="stylesheet" href="styles.css">
+    </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <a class="navbar-brand" href="#">DemocracEasy</a>
@@ -29,7 +34,7 @@
 
     <!-- Address Input Section -->
     <section id="address-section" class="container my-5">
-        <h2 class="text-center">Find Your Representatives</h2>
+        <h2 class="text-center sub-header">Find Your Representatives</h2>
         <p class="text-center">Enter your address to find your representatives:</p>
         <div class="row justify-content-center">
             <div class="col-md-6">
@@ -45,13 +50,13 @@
 
     <!-- Representatives Display Section -->
     <section id="representatives-section" class="container" style="display: none;">
-        <h2 class="text-center">Your Representatives</h2>
-        <div id="representatives-list" class="row"></div>
+        <h2 class="text-center sub-header">Your Representatives</h2>
+        <div id="representatives-list" class="accordion"></div>
     </section>
 
     <!-- Key Dates Section -->
     <section id="keydates-section" class="container my-5">
-        <h2 class="text-center">Key Political Dates</h2>
+        <h2 class="text-center sub-header">Key Political Dates</h2>
         <div id="keydates-list" class="row"></div>
     </section>
 
@@ -59,7 +64,7 @@
 
     <!-- Email Subscription Section -->
     <section id="subscription-section" class="container my-5">
-        <h2 class="text-center">Stay Updated</h2>
+        <h2 class="text-center sub-header">Stay Updated</h2>
         <p class="text-center">Submit your email to receive news and info about your politicians!</p>
         <form id="subscription-form" class="d-flex flex-column align-items-center">
         <div class="form-group w-50">
@@ -79,6 +84,8 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- Your Custom Script -->
+    <script src="script.js"></script>
 
 </body>
 </html>

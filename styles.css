@@ -95,6 +95,94 @@ h1 {
     font-weight: bold;
 }
 
+/* Class for the main header */
+.sub-header {
+    color: navy; /* Navy Blue color */
+}
+
 #subscription-message {
     font-weight: bold;
+}
+
+.btn-link {
+    text-decoration: none;
+    font-size: 1.25rem;
+}
+
+/* Adjust card margins */
+#representatives-list .card {
+    margin-bottom: 1rem;
+}
+
+/* styles.css */
+
+/* Style for the collapse buttons */
+.btn-link {
+    color: navy; /* Bootstrap primary color */
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.btn-link:hover {
+    text-decoration: underline;
+    color: #0056b3; /* Darker shade on hover */
+}
+
+/* Style for the card headers */
+.card-header {
+    background-color: #f8f9fa; /* Light gray background */
+}
+
+/* Adjust the icon size and position */
+.toggle-icon {
+    font-size: 1rem;
+}
+
+/* Style for the section cards */
+#representatives-list .card {
+    border: none;
+    border-bottom: 1px solid #dee2e6;
+}
+
+/* Adjust the representative card images */
+.card-img {
+    border-radius: 5px;
+    max-height: 150px;
+    object-fit: cover;
+}
+
+/* Style the card body */
+.card-body {
+    padding: 1rem;
+}
+
+/* Hover effect for the card headers */
+.card-header:hover {
+    background-color: #e9ecef;
+    cursor: pointer;
+}
+
+/* Remove default card header padding */
+.card-header {
+    padding: 0.5rem 1rem;
+}
+
+/* Style the header title */
+.card-header h5 {
+    margin: 0;
+}
+
+/* Adjust the toggle icon size */
+.card-header .toggle-icon {
+    font-size: 1.25rem;
+}
+
+.card-header h5 i {
+    font-size: 1.25rem;
+    vertical-align: middle;
+}
+
+/* Add transition to collapse */
+.collapse {
+    transition: height 0.2s ease;
 }

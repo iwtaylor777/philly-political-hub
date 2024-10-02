@@ -46,13 +46,21 @@ document.addEventListener('DOMContentLoaded', () => {
             const officials = data.officials;
             const offices = data.offices;
     
-            let reps = [];
+            // Create arrays to hold representatives by level
+            let federalReps = [];
+            let stateReps = [];
+            let localReps = [];
     
             // Map officials to their offices
             offices.forEach(office => {
                 office.officialIndices.forEach(index => {
                     const official = officials[index];
-                    reps.push({
+    
+                    // Determine the level based on the division ID
+                    const divisionId = office.divisionId;
+                    let level = getLevelFromDivisionId(divisionId);
+    
+                    const rep = {
                         name: official.name,
                         office: office.name,
                         party: official.party || 'Unknown',
@@ -60,41 +68,128 @@ document.addEventListener('DOMContentLoaded', () => {
                         emails: official.emails || ['Not Available'],
                         photoUrl: official.photoUrl || '',
                         urls: official.urls || []
-                    });
+                    };
+    
+                    // Categorize representatives
+                    if (level === 'federal') {
+                        federalReps.push(rep);
+                    } else if (level === 'state') {
+                        stateReps.push(rep);
+                    } else {
+                        localReps.push(rep);
+                    }
                 });
             });
     
-            reps.forEach(rep => {
-                const repCard = document.createElement('div');
-                repCard.className = 'col-md-6';
-    
-                const cardContent = `
-                    <div class="card mb-4">
-                        ${rep.photoUrl ? `
-                        <img src="${rep.photoUrl}" class="card-img-top" alt="${rep.name}">
-                        ` : ''}
-                        <div class="card-body">
-                            <h5 class="card-title">${rep.name}</h5>
-                            <p class="card-text"><strong>Office:</strong> ${rep.office}</p>
-                            <p class="card-text"><strong>Party:</strong> ${rep.party}</p>
-                            <p class="card-text"><strong>Phone:</strong> ${rep.phones.join(', ')}</p>
-                            <p class="card-text"><strong>Email:</strong> ${rep.emails.join(', ')}</p>
-                            ${rep.urls.length > 0 ? `<p class="card-text"><strong>Website:</strong> <a href="${rep.urls[0]}" target="_blank">${rep.urls[0]}</a></p>` : ''}
-                        </div>
-                    </div>
-                `;
-    
-                repCard.innerHTML = cardContent;
-    
-                representativesList.appendChild(repCard);
-            });
+            // Create collapsible sections
+            createCollapsibleSection('Federal Representatives', federalReps, 'federal-section', true);
+            createCollapsibleSection('State Representatives', stateReps, 'state-section', true);
+            createCollapsibleSection('Local Representatives', localReps, 'local-section', false);
     
             representativesSection.style.display = 'block';
         } else {
             representativesSection.style.display = 'none';
             alert('No representatives found for this address.');
         }
-    }    
+    }
+    
+    function getLevelFromDivisionId(divisionId) {
+        if (divisionId.includes('/country:us')) {
+            if (divisionId.includes('/state:')) {
+                if (divisionId.includes('/county:') || divisionId.includes('/place:') || divisionId.includes('/cd:') || divisionId.includes('/sld')) {
+                    return 'local';
+                } else {
+                    return 'state';
+                }
+            } else {
+                return 'federal';
+            }
+        } else {
+            return 'local';
+        }
+    }
+
+    function createCollapsibleSection(title, repsArray, sectionId, collapsed) {
+        let levelIcon = '';
+        if (title.includes('Federal')) {
+            levelIcon = '<i class="fas fa-landmark mr-2"></i>';
+        } else if (title.includes('State')) {
+            levelIcon = '<i class="fas fa-university mr-2"></i>';
+        } else if (title.includes('Local')) {
+            levelIcon = '<i class="fas fa-city mr-2"></i>';
+        }
+        
+        const sectionDiv = document.createElement('div');
+        sectionDiv.className = 'mb-3';
+    
+        const headerId = sectionId + '-header';
+        const collapseId = sectionId + '-collapse';
+    
+        sectionDiv.innerHTML = `
+        <div class="card">
+            <div class="card-header d-flex justify-content-between align-items-center" id="${headerId}" data-toggle="collapse" data-target="#${collapseId}" aria-expanded="${!collapsed}" aria-controls="${collapseId}" style="cursor: pointer;">
+                <h5 class="mb-0">
+                    ${levelIcon}${title}
+                </h5>
+                <i class="fas fa-chevron-${collapsed ? 'down' : 'up'} toggle-icon"></i>
+            </div>
+            <div id="${collapseId}" class="collapse ${collapsed ? '' : 'show'}" aria-labelledby="${headerId}" data-parent="#representatives-list">
+                <div class="card-body" id="${sectionId}-body">
+                    <!-- Representatives will be appended here -->
+                </div>
+            </div>
+        </div>
+    `;
+    
+        representativesList.appendChild(sectionDiv);
+    
+        const repsBody = document.getElementById(`${sectionId}-body`);
+    
+        repsArray.forEach(rep => {
+            const repCard = document.createElement('div');
+            repCard.className = 'card mb-3';
+    
+            repCard.innerHTML = `
+                <div class="card mb-3 border-0">
+                    <div class="row no-gutters align-items-center">
+                        ${rep.photoUrl ? `
+                        <div class="col-md-3">
+                            <img src="${rep.photoUrl}" class="card-img" alt="${rep.name}">
+                        </div>
+                        ` : ''}
+                        <div class="${rep.photoUrl ? 'col-md-9' : 'col-md-12'}">
+                            <div class="card-body">
+                                <h5 class="card-title">${rep.name}</h5>
+                                <p class="card-text mb-1"><strong>Office:</strong> ${rep.office}</p>
+                                <p class="card-text mb-1"><strong>Party:</strong> ${rep.party}</p>
+                                <p class="card-text mb-1"><strong>Phone:</strong> ${rep.phones.join(', ')}</p>
+                                <p class="card-text mb-1"><strong>Email:</strong> ${rep.emails.join(', ')}</p>
+                                ${rep.urls.length > 0 ? `<p class="card-text mb-1"><strong>Website:</strong> <a href="${rep.urls[0]}" target="_blank">${rep.urls[0]}</a></p>` : ''}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            `;
+    
+            repsBody.appendChild(repCard);
+        });
+    
+        // Add event listener to toggle icons on collapse/expand
+        const collapseElement = document.getElementById(collapseId);
+        const toggleButton = sectionDiv.querySelector(`[data-target="#${collapseId}"]`);
+        const toggleIcon = toggleButton.querySelector('.toggle-icon');
+    
+        $(collapseElement).on('hide.bs.collapse', function () {
+            toggleIcon.classList.remove('fa-chevron-up');
+            toggleIcon.classList.add('fa-chevron-down');
+        });
+    
+        $(collapseElement).on('show.bs.collapse', function () {
+            toggleIcon.classList.remove('fa-chevron-down');
+            toggleIcon.classList.add('fa-chevron-up');
+        });
+    }
+    
 
     function loadKeyDates() {
         fetch('keydates.json')
