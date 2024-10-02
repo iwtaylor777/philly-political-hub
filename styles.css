@@ -214,3 +214,50 @@ h1 {
     border: none;
     border-bottom: 1px solid #dee2e6;
 }
+
+/* Adjust heading styles */
+h1 {
+    font-weight: 700;
+}
+
+h2 {
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+/* Adjust paragraph styles */
+p {
+    font-size: 1.1rem;
+}
+
+/* Ensure images are styled properly */
+.img-fluid {
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* Fade-in animation for feature sections */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translate3d(0, 20%, 0);
+    }
+    to {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+.feature-section {
+    animation: fadeInUp 1s ease forwards;
+}
+
+/* Style for the "What's Coming Next" link in the navbar */
+.navbar-nav .nav-link.bright-text {
+    color: #cb3bff; /* Bright yellow color */
+    font-weight: bold;
+}
+
+.navbar-nav .nav-link.bright-text:hover {
+    color: #f89dff; /* Slightly lighter on hover */
+}
