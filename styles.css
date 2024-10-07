@@ -333,3 +333,20 @@ a:hover {
 .dropdown-menu .dropdown-item:hover {
     background-color: #495057; /* Slightly lighter on hover */
 }
+
+/* Navigation Bar Flag Icon */
+.nav-flag-icon {
+    width: 20px;
+    height: auto;
+}
+
+/* Footer Flag Icon */
+.footer-flag-icon {
+    width: 30px;
+    height: auto;
+    vertical-align: middle;
+}
+/* Vertical alignment for navbar */
+.navbar .nav-flag-icon {
+    vertical-align: middle;
+}
