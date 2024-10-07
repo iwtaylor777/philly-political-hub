@@ -13,20 +13,16 @@
         <link rel="stylesheet" href="styles.css">
     </head>
 <body>
-    <!-- Navigation Bar -->
+<!-- Navigation Bar -->
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container">
-      <!-- Left Side Links -->
-      <div class="navbar-header">
-        <a class="navbar-brand" href="index.html">DemocracEasy</a>
-        <ul class="navbar-nav d-inline-flex align-items-center">
-          <li class="nav-item">
-            <a class="nav-link bright-text" href="coming-soon.html">What's Coming Next</a>
-          </li>
-        </ul>
+      <!-- Left Side -->
+      <div class="d-flex align-items-center">
+        <a class="navbar-brand mr-3" href="index.html">DemocracEasy</a>
+        <a class="nav-link bright-text p-0 mr-3" href="coming-soon.html">What's Coming Next</a>
       </div>
   
-      <!-- Toggler Button for Mobile View -->
+      <!-- Toggler Button and Right Side Links -->
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" 
           aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -35,12 +31,22 @@
       <!-- Right Side Links -->
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ml-auto">
-        <a class="nav-link" href="#" id="home-button">Home</a>
-          <!-- Existing nav items (if any) -->
+          <!-- Resources Dropdown Menu -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="resourcesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Resources
+            </a>
+            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="resourcesDropdown">
+              <a class="dropdown-item" href="https://www.nass.org/can-i-vote/find-your-polling-place" target="_blank">Find My Polling Location</a>
+              <a class="dropdown-item" href="https://www.nass.org/can-I-vote/voter-registration-status" target="_blank">Check My Registration Status</a>
+              <a class="dropdown-item" href="https://www.nass.org/can-i-vote/register-to-vote" target="_blank">Register to Vote</a>
+            </div>
+          </li>
         </ul>
       </div>
     </div>
   </nav>
+  
   
 
     <h1 class="text-center my-4 main-header">DemocracEasy's Political Info Hub</h1>

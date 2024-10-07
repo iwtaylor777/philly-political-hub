@@ -223,6 +223,7 @@ h1 {
 h2 {
     font-weight: 600;
     margin-bottom: 1rem;
+    color:#032281
 }
 
 /* Adjust paragraph styles */
@@ -254,7 +255,7 @@ p {
 
 /* Style for the "What's Coming Next" link in the navbar */
 .navbar-nav .nav-link.bright-text {
-    color: #cb3bff; /* Bright yellow color */
+    color: #c030f4; /* Bright yellow color */
     font-weight: bold;
 }
 
@@ -267,16 +268,16 @@ body {
 }
 
 .navbar, .footer {
-    background-color: #343a40;
+    background-color: #04195a;
     color: #ffffff;
 }
 
 a {
-    color: #007bff;
+    color: #e00421;
 }
 
 a:hover {
-    color: #0056b3;
+    color: #f04b3f;
 }
 
 .btn-primary {
@@ -306,4 +307,29 @@ a:hover {
     color: #ffffff;
     padding: 2rem;
     text-align: center;
+}
+
+/* styles.css */
+
+/* Style for the Resources dropdown toggle */
+.navbar-nav .nav-link.dropdown-toggle {
+    color: #ffffff;
+}
+
+.navbar-nav .nav-link.dropdown-toggle:hover {
+    color: #cccccc;
+}
+
+/* Style for the dropdown menu */
+.dropdown-menu {
+    background-color: #343a40; /* Dark background */
+    border: none;
+}
+
+.dropdown-menu .dropdown-item {
+    color: #ffffff;
+}
+
+.dropdown-menu .dropdown-item:hover {
+    background-color: #495057; /* Slightly lighter on hover */
 }
