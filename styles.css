@@ -261,3 +261,49 @@ p {
 .navbar-nav .nav-link.bright-text:hover {
     color: #f89dff; /* Slightly lighter on hover */
 }
+
+body {
+    background-color: #f8f9fa;
+}
+
+.navbar, .footer {
+    background-color: #343a40;
+    color: #ffffff;
+}
+
+a {
+    color: #007bff;
+}
+
+a:hover {
+    color: #0056b3;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    color: #ffffff;
+    border: none;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+    color: #e2e2e2;
+    transition: background-color 0.3s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.section {
+    opacity: 0;
+    animation: fadeIn 1s ease forwards;
+}
+
+.cta-section {
+    background-color: #343a40;
+    color: #ffffff;
+    padding: 2rem;
+    text-align: center;
+}

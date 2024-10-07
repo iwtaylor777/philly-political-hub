@@ -344,8 +344,11 @@ document.addEventListener('DOMContentLoaded', () => {
             // Reset the form
             subscriptionForm.reset();
         } else {
-            subscriptionMessage.textContent = 'Please enter a valid email address.';
-            subscriptionMessage.style.color = 'red';
+            subscriptionMessage.textContent = 'Thank you for subscribing!';
+            subscriptionMessage.style.color = 'green!';    
+
+            // subscriptionMessage.textContent = 'Please enter a valid email address.';
+            // subscriptionMessage.style.color = 'red';
         }
     });    
     // Home button handling
